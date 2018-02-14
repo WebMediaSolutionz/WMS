@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+// Environment config
+import { environment } from "../environments/environment";
+
 @Component({
   moduleId: module.id,
   selector: 'app-root',
@@ -7,5 +10,5 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  private cdnUrl: string = environment.cdnUrl;
 }
