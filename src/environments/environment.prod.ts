@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  cdnUrl: 'http://localhost:1000'
+  cdnUrl: 'http://webmediasolutionz.io:1000'
 };
