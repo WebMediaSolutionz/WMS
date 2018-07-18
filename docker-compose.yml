@@ -1,0 +1,19 @@
+version: '3.3'
+
+services:
+
+  # docker run --name portainer -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
+  portainer:
+    image: portainer/portainer
+    ports:
+      - '9000:9000'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+      - client
+
+  client:
+    build: .
+    image: max2wms/wms
+    ports:
+      - "80:80"
