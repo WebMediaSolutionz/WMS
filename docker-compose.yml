@@ -13,7 +13,6 @@ services:
       - client
 
   client:
-    build: .
     image: max2wms/wms
     ports:
       - "80:80"
